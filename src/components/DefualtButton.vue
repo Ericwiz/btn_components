@@ -1,7 +1,7 @@
 <template>
     <v-row>
         <v-col v-for="btn in defualtButtons" :key="btn" cols="12" md="6">
-            <p class="pb-4 text-body-2">{{ btn.text }}</p>
+            <p class="pb-4 text-caption">{{ btn.text }}</p>
             <v-btn :variant="btn.variant" class="rounded-lg" :class="btn.color">{{ btn.name }}</v-btn>
         </v-col>
     </v-row>

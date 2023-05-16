@@ -3,13 +3,14 @@
   color="grey-lighten-4"
   permanent
   >
-    <v-list class="mb-12">
+    <v-list class="mb-12 ml-4">
       <v-list-item>
-        <span class="text-red">Dev</span>challenges.io
+        <p><span class="text-red">Dev</span>challenges.io</p>
+          <v-switch @click="toggleTheme"></v-switch>
       </v-list-item>
     </v-list>
 
-    <v-list>
+    <v-list class="ml-4">
         <v-list-item
         v-for="item in items"
         :key="item"
@@ -23,7 +24,20 @@
 </template>
 
 <script>
+import { useTheme } from 'vuetify/lib/framework.mjs';
   export default {
+    setup() {
+      const theme = useTheme()
+      return {
+        theme,
+        toggleTheme() {
+          theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+        }
+      }
+    },
+
+
+
     data() {
       return {
         items: [
