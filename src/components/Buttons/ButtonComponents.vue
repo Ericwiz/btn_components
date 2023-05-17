@@ -7,7 +7,6 @@
     <SizedButton />
     <DangerButtons />
     <div class="text-left text-caption mt-16">
-    <h4>Solution by <span>Agu O. Wisdom</span></h4>
   </div>
   </v-container>
 </template>
