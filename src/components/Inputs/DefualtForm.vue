@@ -1,8 +1,8 @@
 <template>
     <v-row>
-        <v-col cols="12" md="4" v-for="defualtInput in defualtInputs" :key="defualtInput">
+        <v-col cols="12" md="6" lg="4" v-for="defualtInput in defualtInputs" :key="defualtInput">
             <p class="pb-4 text-caption">{{ defualtInput.text }}</p>
-            <label class="text-capitalize" :class="defualtInput.labelStyle">{{ defualtInput.label }}</label>
+            <label class="text-capitalize d-block" :class="defualtInput.labelStyle">{{ defualtInput.label }}</label>
              <input type="text" class="rounded-lg px-1 py-2"  :disabled="defualtInput.disabled" :class="defualtInput.style">
         </v-col>
     </v-row>
